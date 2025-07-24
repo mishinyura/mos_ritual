@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/media.css">
+    <script src="scripts/modules.js" defer></script>
+    <script src="scripts/app.js" defer></script>
+</head>
+<body class="body">
+    <svg class="body__icons">
+        <symbol id="icon-vk" viewBox="0 0 215 215">
+            <circle fill="#07f" cx="107.5" cy="107.5" r="107.5" />
+            <path fill="#fff" d="M111.44,147.14C69.76,147.14,46,118.56,45,71H65.87c.69,34.9,16.08,49.69,28.27,52.74V71h19.67v30.1c12-1.29,24.69-15,28.95-30.1h19.67c-3.28,18.59-17,32.31-26.75,37.95A60.16,60.16,0,0,1,167,147.14H145.36c-4.65-14.48-16.24-25.68-31.55-27.2v27.2Z" />
+        </symbol>
+        <symbol id="icon-tg" viewBox="0 0 215 215">
+            <linearGradient id="blue-gradient" y1="107.5" x2="215" y2="107.5" gradientUnits="userSpaceOnUse">
+                <stop offset="0" stop-color="#2aabee" />
+                <stop offset="1" stop-color="#229ed9" />
+            </linearGradient>
+            <circle fill="url(#blue-gradient)" cx="107.5" cy="107.5" r="107.5" />
+            <path fill="#fff" d="M603.31,105.65q46.89-20.43,62.53-26.94c29.78-12.38,36-14.53,40-14.61A7.09,7.09,0,0,1,710,65.35a4.49,4.49,0,0,1,1.53,2.9,19.25,19.25,0,0,1,.18,4.23c-1.61,17-8.6,58.09-12.15,77.08-1.5,8-4.46,10.73-7.33,11-6.22.57-11-4.12-17-8.07-9.44-6.19-14.77-10-23.93-16.08-10.59-7-3.72-10.81,2.31-17.07,1.58-1.64,29-26.6,29.54-28.86a2.18,2.18,0,0,0-.5-1.9,2.49,2.49,0,0,0-2.22-.21q-1.41.31-45.22,29.89-6.42,4.41-11.63,4.3c-3.83-.09-11.19-2.17-16.67-4-6.71-2.18-12-3.33-11.58-7Q595.7,108.68,603.31,105.65Z" transform="translate(-554)" />
+        </symbol>
+    </svg>
+    <header class="header">
+        <div class="header__container">
+            <div class="header__head">
+                <a href="/" class="header__logo">
+                    <img src="media/images/logo_gold.png" alt="">
+                    <strong>Московский ритуал</strong>
+                </a>
+                <div class="header__description">
+                    Официальный сайт службы ритуальных услуг
+                </div>
+                <div class="header__control">
+                    <div class="header__socials">
+                        <p class="header__description">
+                            <strong>Задайте вопрос</strong>
+                            напишите в любой удобный мессенджер
+                        </p>
+                        <div class="messengers">
+                            <a href="#" class="header__messenger">
+                                <svg width="30" height="30">
+                                    <use xlink:href="#icon-tg"></use>
+                                </svg>
+                            </a>
+                            <a href="#" class="header__messenger">
+                                <svg width="30" height="30">
+                                    <use xlink:href="#icon-vk"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <button class="header__btn header__btn_cosult">
+                        <svg class="header__icon-btn" xmlns="http://www.w3.org/2000/svg" width="22" height="22">
+                            <path fill="none" fill-rule="evenodd" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 15.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.11 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 15.92z"></path>
+                        </svg>
+                        <span class="header__text-btn">Консультация</span>
+                    </button>
+                    <button class="header__btn header__btn_burger">
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+            <nav class="header__nav navbar">
+                <ul class="navbar__list">
+                    <li class="navbar__item">
+                        <a href="#" class="navbar__link active">
+                            Основная
+                        </a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="#" class="navbar__link">
+                            Ритуальные услуги
+                        </a>
+                        <ul class="navbar__sublist">
+                            <li class="navbar__subitem">
+                                <a href="#" class="navbar__sublink">
+                                    Агентское сопровождение
+                                </a>
+                            </li>
+                            <li class="navbar__subitem">
+                                <a href="#" class="navbar__sublink">
+                                    Кремация
+                                </a>
+                            </li>
+                            <li class="navbar__subitem">
+                                <a href="#" class="navbar__sublink">
+                                    Похороны
+                                </a>
+                            </li>
+                            <li class="navbar__subitem">
+                                <a href="#" class="navbar__sublink">
+                                    Транспортировка тела
+                                </a>
+                            </li>
+                            <li class="navbar__subitem">
+                                <a href="#" class="navbar__sublink">
+                                    Отпевание
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="#" class="navbar__link">
+                            Ритуальные принадлежности
+                        </a>
+                        <ul class="navbar__sublist">
+                            <li class="navbar__subitem">
+                                <a href="#" class="navbar__sublink">
+                                    Гробы
+                                </a>
+                            </li>
+                            <li class="navbar__subitem">
+                                <a href="#" class="navbar__sublink">
+                                    Текстиль
+                                </a>
+                            </li>
+                            <li class="navbar__subitem">
+                                <a href="#" class="navbar__sublink">
+                                    Фурнитура
+                                </a>
+                            </li>
+                            <li class="navbar__subitem">
+                                <a href="#" class="navbar__sublink">
+                                    Могильные кресты
+                                </a>
+                            </li>
+                            <li class="navbar__subitem">
+                                <a href="#" class="navbar__sublink">
+                                    Венки
+                                </a>
+                            </li>
+                            <li class="navbar__subitem">
+                                <a href="#" class="navbar__sublink">
+                                    Корзины
+                                </a>
+                            </li>
+                            <li class="navbar__subitem">
+                                <a href="#" class="navbar__sublink">
+                                    Похоронные костюмы
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="#" class="navbar__link">
+                            Полезная информация
+                        </a>
+                        <ul class="navbar__sublist">
+                            <li class="navbar__subitem">
+                                <a href="#" class="navbar__sublink">
+                                    Крематории
+                                </a>
+                            </li>
+                            <li class="navbar__subitem">
+                                <a href="#" class="navbar__sublink">
+                                    Кладбища
+                                </a>
+                            </li>
+                            <li class="navbar__subitem">
+                                <a href="#" class="navbar__sublink">
+                                    Морги
+                                </a>
+                            </li>
+                            <li class="navbar__subitem">
+                                <a href="#" class="navbar__sublink">
+                                    Храмы
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="main">
+        <section class="main__section hero">
+            <div class="hero__container">
+                <div class="hero__text">
+                    <h1 class="hero__title">
+                        Организация похорон&nbsp;&mdash; с&nbsp;заботой о&nbsp;близких и&nbsp;уважением к&nbsp;усопшему
+                    </h1>
+                    <p class="hero__description">
+                        Потеря близкого человека&nbsp;&mdash; тяжёлый момент, и&nbsp;мы&nbsp;понимаем, как важно в&nbsp;это время быть рядом. Наше ритуальное агентство работает круглосуточно, чтобы снять с&nbsp;семьи заботы по&nbsp;организации прощания.
+                    </p>
+                    <button class="hero__btn">
+                        Вызвать ритуального агента
+                    </button>
+                </div>
+                <div class="hero__advantages">
+                    <div class="hero__advant">
+                        <span class="hero__count">
+                            24 551,37 Р
+                        </span>
+                        <p class="hero__detail">
+                            Оказание ритуальный услуг 
+                            <strong>с&nbsp;компенсацией социального пособия</strong>
+                        </p>
+                    </div>
+                    <div class="hero__advant">
+                        <span class="hero__count">
+                            0 %
+                        </span>
+                        <p class="hero__detail">
+                            <strong>Рассрочка</strong> от&nbsp;компании 
+                            на&nbsp;организацию достойных похорон
+                        </p>
+                    </div>
+                    <div class="hero__advant">
+                        <span class="hero__count">
+                            10 %
+                        </span>
+                        <p class="hero__detail">
+                            <strong>Скидка на&nbsp;ритуальные услуги</strong>
+                            по&nbsp;карте Москвича
+                        </p>
+                    </div>
+                </div>
+                <form action="" class="hero__form calling">
+                    <span class="calling__close">X</span>
+                    <h3 class="calling__title">
+                        Оставить заявку
+                    </h3>
+                    <p class="calling__description">
+                        Cотрудник агентского сопровождения свяжется с&nbsp;Вами 
+                        удобным для Вас способом в&nbsp;течении 15&nbsp;минут
+                    </p>
+                    <lable class="calling__wrapper calling__wrapper_name">
+                        <input class="calling__input" name="name" type="text" placeholder="Ваше имя">
+                    </lable>
+                    <lable class="calling__wrapper calling__wrapper_phone">
+                        <input class="calling__input" name="phone" type="text" placeholder="Ваш телефон">
+                    </lable>
+                    <div class="calling__select">
+                        <lable class="calling__wrapper calling__wrapper_way">
+                            <input class="calling__input" name="way" type="text" value="По телефону" data-way="phone" readonly>
+                        </lable>
+                        <ul class="calling__list">
+                            <li class="calling__item" data-way="telegram">
+                                Telegram
+                            </li>
+                            <li class="calling__item selected" data-way="phone">
+                                По телефону
+                            </li>
+                            <li class="calling__item" data-way="whatsapp">
+                                What's app
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="calling__btn">
+                        Вызвать ритуального агента
+                    </button>
+                    <label class="calling__chackbox calling__chackbox_agree">
+                        <input type="checkbox" checked>
+                        <span></span>
+                        <span>
+                            Согласен(а) с&nbsp;
+                            <a href="#" class="calling__link">
+                                политикой конфиденциальности
+                            </a>
+                            и&nbsp;
+                            <a href="#" class="calling__link">
+                                пользовательским соглашением
+                            </a>
+                        </span>
+                    </label>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__contacts">
+                <a href="#" class="footer__logo">
+                    <img src="media/images/logo_gold.png" alt="">
+                    Московский ритуал
+                </a>
+                <button class="footer__btn footer__btn_consult">
+                    Проконсультироваться
+                </button>
+                <button class="footer__btn footer__btn_calling">
+                    Вызвать агента
+                </button>
+                <address class="footer__address">
+                    <span class="footer__addr">
+                        г.Москва, наб. Нагатинская, д. 46, корп. 2
+                    </span>
+                    <a href="tel:88008884040" class="footer__phone"></a>
+                </address>
+            </div>
+            <div class="footer__content">
+                <div class="footer__links">
+                    <h3 class="footer__subtitle">
+                        Документы
+                    </h3>
+                    <ul class="footer__list">
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">
+                                Согласие на обработку персональных данных
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">
+                                Политика конфиденциальности
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">
+                                Договор оказания услуг
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">
+                                Свидетельство о смерти
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">
+                                Справка о смерти (Форма №11)
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">
+                                Акт осмотра трупа
+                            </a>
+
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">
+                                Бланк констатации смерти
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__links">
+                    <h3 class="footer__subtitle">
+                        Информация
+                    </h3>
+                    <ul class="footer__list">
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">
+                                О компании
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">
+                                Контакты
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">
+                                Отзывы
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">
+                                Вакансии
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

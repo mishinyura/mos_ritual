@@ -1,0 +1,191 @@
+:root{
+    /*--свойство-предмет-модификация*/
+    /* Цвета */
+    --color-text-black: #000;
+    --color-text-grey: #acacac;
+    --color-text-dark-blue: #040F33;
+    --color-text-gold: #9E915B;
+    --color-text-white: #fff;
+    --color-text-blue: #011d7a;
+
+    --color-bg-white: #fff;
+    --color-bg-grey: #E9E9E9;
+    --color-bg-dark-blue: #040F33;
+
+    --color-border-grey: #C7C7C7;
+
+    --liear-gradient-text-gold: linear-gradient(162deg,rgba(205, 195, 156, 1) 20%, rgba(103, 98, 78, 1) 100%);
+
+    /* Отступы */
+    --padding-container-desktop: 1.25em; /* 20px */
+    --padding-container-tablet: 1em; /* 16px */
+    --padding-container-mobile: 0.625em; /* 10px */
+    
+    /* Размеры */
+    --breakpoint-page-desktop: 90rem; /* 1440 px */
+    --breakpoint-page-laptop: 75rem; /* 1200 px */
+    --breakpoint-page-tablet: 61.875rem; /* 990 px */
+    --breakpoint-page-smartphone: 46.875rem; /* 750 px */
+    --breakpoint-page-mobile: 33.75rem; /* 540 px */
+ 
+    --max-width-container-max: 93.75rem; /* 1500px */
+    --max-width-container-desktop: 75rem; /* 1200 px */
+    --max-width-container-laptop: 60rem; /* 960 px */
+    --max-width-container-tablet: 45rem; /* 720 px */
+    --max-width-container-mobile: 100%;
+    
+    
+    /* Радиусы */
+    --radius-sm: 2px;
+    --radius-md: 5px;
+    --radius-lg: 10px;
+    
+    /* Шрифты */
+    --font-family-text-montserrat: 'Montserrat', Arial, sans-serif;
+    --font-family-text-nunito: 'Nunito', Arial, sans-serif;
+
+    --font-size-text-xs: 0.875rem; /* 14px */
+    --font-size-text-sm: 1rem; /* 16px */
+    --font-size-text-md: 1.25rem; /* 20px */
+    --font-size-text-lg: 1.5rem; /* 24px */
+
+    --font-size-title-xs: 1rem; /* h4... - 16px */
+    --font-size-title-sm: 1.5rem; /* h3 - 24px */
+    --font-size-title-md: 2rem; /* h2 - 32px */
+    --font-size-title-lg: 2.5rem; /* h1 - 40px */
+
+    --font-size-btn: 1rem;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/montserrat/Montserrat-Light.woff2') format('woff2'),
+         url('../fonts/montserrat/Montserrat-Light.woff') format('woff'),
+         url('../fonts/montserrat/Montserrat-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/montserrat/Montserrat-Regular.woff2') format('woff2'),
+         url('../fonts/montserrat/Montserrat-Regular.woff') format('woff'),
+         url('../fonts/montserrat/Montserrat-Regulat.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/montserrat/Montserrat-Medium.woff2') format('woff2'),
+         url('../fonts/montserrat/Montserrat-Medium.woff') format('woff'),
+         url('../fonts/montserrat/Montserrat-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/montserrat/Montserrat-Bold.woff2') format('woff2'),
+         url('../fonts/montserrat/Montserrat-Bold.woff') format('woff'),
+         url('../fonts/montserrat/Montserrat-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    src: url('../fonts/nunito/Nunito-Bold.woff2') format('woff2'),
+         url('../fonts/nunito/Nunito-Bold.woff') format('woff'),
+         url('../fonts/nunito/Nunito-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    src: url('../fonts/nunito/Nunito-Light.woff2') format('woff2'),
+         url('../fonts/nunito/Nunito-Light.woff') format('woff'),
+         url('../fonts/nunito/Nunito-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    src: url('../fonts/nunito/Nunito-Regular.woff2') format('woff2'),
+         url('../fonts/nunito/Nunito-Regular.woff') format('woff'),
+         url('../fonts/nunito/Nunito-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@keyframes heartbeat {
+  0%   { box-shadow: inset 0 0 10px 1px white; }
+
+  /* «систола» — тень максимально раздута */
+  25%  { box-shadow: inset 0 0 40px rgba(255, 0, 64, 0.4); }
+  35%  { box-shadow: inset 0 0 25px rgba(255, 0, 64, 0.25); }
+
+  /* «диастола» — тень почти исчезла */
+  50%  { box-shadow: inset 0 0 0 rgba(255, 0, 64, 0); }
+
+  60%  { box-shadow: inset 0 0 20px rgba(255, 0, 64, 0.35); }
+  100% { box-shadow: inset 0 0 0 rgba(255, 0, 64, 0); }
+}
+
+a{
+    font-family: var(--font-family-text-nunito);
+    text-decoration: none;
+    color: var(--color-text-black);
+    outline: none;
+}
+
+button{
+    padding: 0;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    font-family: var(--font-family-text-montserrat)
+}
+
+p{
+    margin: 0;
+    font-family: var(--font-family-text-nunito);
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+input{
+    border: none;
+    outline: none;
+}
+
+.body{
+    position: relative;
+    min-height: 100%;
+    min-width: 320px;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    background-color: var(--color-bg-grey);
+}
+
+.icons{
+    display: none;
+}
