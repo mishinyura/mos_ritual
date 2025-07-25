@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 
-from app.api.services import service_router
+from app.api.service import service_router
 from app.middlewares.rate_limit import RateLimitMiddleware
 from app.core.config import settings
 
