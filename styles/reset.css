@@ -11,6 +11,7 @@
     --color-bg-white: #fff;
     --color-bg-grey: #E9E9E9;
     --color-bg-dark-blue: #040F33;
+    --color-bg-gold: #9E915B;
 
     --color-border-grey: #C7C7C7;
 
@@ -183,7 +184,7 @@ input{
     min-width: 320px;
     overflow-x: hidden;
     box-sizing: border-box;
-    background-color: var(--color-bg-grey);
+    /* background-color: var(--color-bg-grey); */
 }
 
 .icons{

@@ -118,7 +118,7 @@
         padding: 0;
         margin-right: 20px;
         border-radius: 50px;
-        background-color: rgb(0, 212, 120);
+        background-color: var(--color-bg-dark-blue);
     }
     .header__icon-btn{
         display: block;
