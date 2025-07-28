@@ -11,6 +11,7 @@
     --color-bg-white: #fff;
     --color-bg-grey: #E9E9E9;
     --color-bg-dark-blue: #040F33;
+    --color-bg-blue: #3554ba;
     --color-bg-gold: #9E915B;
     --color-bg-milk: #f7f6f0;
 
@@ -210,6 +211,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1{
     font-family: var(--font-family-cormorant-garamond);
+    font-size: var(--font-size-title-lg);
     font-weight: 600;
 }
 
