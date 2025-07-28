@@ -4,7 +4,7 @@ from typing import Any
 from sqlalchemy.ext.asyncio import AsyncSession
 
 
-class BaseCRUD(ABC):
+class BaseRepository(ABC):
     @abstractmethod
     async def create(self, obj: Any, session: AsyncSession) -> int: ...
 

@@ -58,7 +58,7 @@ class Menu{
     }
 }
 
-class Form{
+class FormModal{
     constructor(settings) {
         this.body = document.querySelector('body');
         this.form = document.querySelector(settings.form);
@@ -115,5 +115,53 @@ class Form{
             this.body.classList.remove('blackout')
         } 
         console.log('hide')
+    }
+}
+
+class Accordion{
+    constructor({name, btns, collapse}){
+        this.accordion = document.querySelector(name)
+        this.btns = this.accordion.querySelectorAll(btns)
+        this.collapse = collapse
+
+        this.handlerClickBtn = this.clickBtn.bind(this)
+
+
+        for (let btn of this.btns) {
+            btn.addEventListener('click', this.handlerClickBtn)
+        }
+    }
+
+    open(btn){
+        let detail = btn.nextElementSibling
+        detail.classList.add('open')
+        btn.classList.add('open')
+        console.log(detail)
+    }
+
+    close(btn){
+        btn.classList.remove('open')
+        btn.nextElementSibling.classList.remove('open')
+    }
+
+    closeAll() {
+        for (let btn of this.btns) {
+            btn.classList.remove('open')
+            btn.nextElementSibling.classList.remove('open')
+        }
+    }
+
+    clickBtn(btn) {
+        if (this.collapse) {
+            this.closeAll()
+            this.open(btn.currentTarget)
+        } else {
+            if (btn.currentTarget.classList.contains('open')) {
+                this.close(btn.currentTarget)
+            } else {
+                this.open(btn.currentTarget)
+            }
+        }
+        
     }
 }

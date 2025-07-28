@@ -8,7 +8,7 @@ from app.core.database import get_session
 
 class ServiceSrv:
     def __init__(self):
-        self.crud = service_repo()
+        self.crud = service_repo
 
     async def get_one_short_service(self, session: AsyncSession = Depends(get_session)):
         service = await self.crud.get(1, session)

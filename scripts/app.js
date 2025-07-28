@@ -1,7 +1,30 @@
-let select = new Select({
+// document.addEventListener('contextmenu', function (e) {
+//   e.preventDefault();
+// });
+
+// document.addEventListener('keydown', function (e) {
+//   // F12
+//   if (e.key === 'F12') {
+//     e.preventDefault();
+//   }
+
+//   // Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U
+//   if ((e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J')) || 
+//       (e.ctrlKey && e.key === 'U')) {
+//     e.preventDefault();
+//   }
+// });
+
+let selectCallingAgentForm = new Select({
     obj: '.calling__select',
     input: '.calling__wrapper_way',
     options: '.calling__item'
+})
+
+let selectCallbackForm = new Select({
+    obj: '.callback__select',
+    input: '.callback__wrapper_way',
+    options: '.callback__item'
 })
 
 let menu = new Menu({
@@ -9,20 +32,66 @@ let menu = new Menu({
     navbar: '.navbar'
 })
 
+let accordion = new Accordion({
+  name: '.answers__list',
+  btns: '.answers__subtitle',
+  collapse: false
+})
 
-if (window.innerWidth <= 1200) {
-    let callAgentForm = new Form({
-        form: '.calling',
-        openBtn: '.hero__btn',
-        sendBtn: '.calling__btn',
-        closeBtn: '.calling__close',
-        
-        countClick: 1, //Счетчик с какого раза при нажатии на submit отправить
-    })
-}
+
+let callAgentForm = new FormModal({
+    form: '.calling',
+    openBtn: '.hero__btn',
+    sendBtn: '.calling__btn',
+    closeBtn: '.calling__close',
+    countClick: 1, //Счетчик с какого раза при нажатии на submit отправить
+})
 
 
 let lst = document.querySelectorAll('.navbar__link')
+
+
+let body = document.querySelector('.body')
+
+// body.addEventListener('click', (e) => {
+//     if (e.target.classList.contains('blackout')) {
+//         body.classList.remove('blackout')
+//     }
+// })
+
+
+
+let reviewsSlider = new Swiper('.reviews__slider', {
+  direction: 'horizontal',
+  loop: true,
+  slidesPerView: 3,
+  spaceBetween:  30,
+  wrapperClass: 'reviews__wrapper',
+  slideClass: 'reviews__slide',
+  watchSlidesProgress: true,
+  on: {
+    progress(reviewsSlider) {
+      reviewsSlider.slides.forEach((slide) => {
+        const slideProgress = slide.progress;
+        const scale = 1 - Math.abs(slideProgress) * 0.2;
+        slide.style.transform = `scale(${scale})`;
+        slide.style.transition = 'transform 0.3s ease';
+      });
+    },
+    setTransition(reviewsSlider, duration) {
+      reviewsSlider.slides.forEach(slide => {
+        slide.style.transitionDuration = `${duration}ms`;
+      });
+    }
+  }
+});
+
+
+// new Slider({
+//     obj: '.reviews__slider',
+//     slide: '.reviews__slide'
+// })
+
 
 
 // for (let link of lst) {

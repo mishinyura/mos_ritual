@@ -12,15 +12,26 @@
     --color-bg-grey: #E9E9E9;
     --color-bg-dark-blue: #040F33;
     --color-bg-gold: #9E915B;
+    --color-bg-milk: #f7f6f0;
+
+    --color-btn-grey: #dedede;
 
     --color-border-grey: #C7C7C7;
 
     --liear-gradient-text-gold: linear-gradient(162deg,rgba(205, 195, 156, 1) 20%, rgba(103, 98, 78, 1) 100%);
 
     /* Отступы */
-    --padding-container-desktop: 1.25em; /* 20px */
-    --padding-container-tablet: 1em; /* 16px */
-    --padding-container-mobile: 0.625em; /* 10px */
+    --padding-lr-container-desktop: 1.25em; /* 20px */
+    --padding-lr-container-tablet: 1em; /* 16px */
+    --padding-lr-container-mobile: 0.625em; /* 10px */
+
+    --padding-tb-container-desktop: 6.25rem; /* 100px */
+    --padding-tb-container-tablet: 3.125rem; /* 50px */
+    --padding-tb-container-mobile: 1.875rem; /* 30px */
+
+    --margint-bottom-title-desktop: 30px;
+
+    --margin-bottom-descr-desktop: 20px;
     
     /* Размеры */
     --breakpoint-page-desktop: 90rem; /* 1440 px */
@@ -40,10 +51,14 @@
     --radius-sm: 2px;
     --radius-md: 5px;
     --radius-lg: 10px;
+    --radius-max: 25px;
     
     /* Шрифты */
-    --font-family-text-montserrat: 'Montserrat', Arial, sans-serif;
-    --font-family-text-nunito: 'Nunito', Arial, sans-serif;
+    --font-family-cormorant-garamond: 'Cormorant Garamond', 'Times New Roman', 'Georgia', 'Times', serif;
+    --font-family-montserrat: 'Montserrat', Arial, sans-serif;
+    --font-family-nunito: 'Nunito', Arial, sans-serif;
+    --font-family-oswald: 'Oswald';
+    --font-family-roboto: 'Roboto Condensed';
 
     --font-size-text-xs: 0.875rem; /* 14px */
     --font-size-text-sm: 1rem; /* 16px */
@@ -56,6 +71,36 @@
     --font-size-title-lg: 2.5rem; /* h1 - 40px */
 
     --font-size-btn: 1rem;
+}
+
+@font-face {
+    font-family: 'Cormorant Garamond';
+    src: url('../fonts/cormorant_garamond/CormorantGaramond-Medium.woff2') format('woff2'),
+         url('../fonts/cormorant_garamond/CormorantGaramond-Medium.woff') format('woff'),
+         url('../fonts/cormorant_garamond/CormorantGaramond-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Oswald';
+    src: url('../fonts/oswald/Oswald-Medium.woff2') format('woff2'),
+         url('../fonts/oswald/Oswald-Medium.woff') format('woff'),
+         url('../fonts/oswald/Oswald-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto Condensed';
+    src: url('../fonts/roboto_condensed/RobotoCondensed-Regular.woff2') format('woff2'),
+         url('../fonts/roboto_condensed/RobotoCondensed-Regular.woff') format('woff'),
+         url('../fonts/roboto_condensed/RobotoCondensed-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -143,10 +188,11 @@
 }
 
 a{
-    font-family: var(--font-family-text-nunito);
+    font-family: var(--font-family-nunito);
     text-decoration: none;
     color: var(--color-text-black);
     outline: none;
+    cursor: pointer;
 }
 
 button{
@@ -159,12 +205,21 @@ button{
 
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
-    font-family: var(--font-family-text-montserrat)
+    font-family: var(--font-family-montserrat)
+}
+
+h1{
+    font-family: var(--font-family-cormorant-garamond);
+    font-weight: 600;
+}
+
+h2, h3 {
+    font-family: var(--font-family-montserrat)
 }
 
 p{
     margin: 0;
-    font-family: var(--font-family-text-nunito);
+    font-family: var(--font-family-nunito);
 }
 
 ul{
@@ -183,7 +238,6 @@ input{
     min-height: 100%;
     min-width: 320px;
     overflow-x: hidden;
-    box-sizing: border-box;
     /* background-color: var(--color-bg-grey); */
 }
 
