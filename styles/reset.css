@@ -30,15 +30,17 @@
     --padding-tb-container-tablet: 3.125rem; /* 50px */
     --padding-tb-container-mobile: 1.875rem; /* 30px */
 
-    --margint-bottom-title-desktop: 30px;
+    --margin-bottom-title-desktop: 30px;
+    --margin-bottom-title-mobile: 20px;
 
     --margin-bottom-descr-desktop: 20px;
+    --margin-bottom-descr-mobile: 15px;
     
     /* Размеры */
-    --breakpoint-page-desktop: 90rem; /* 1440 px */
-    --breakpoint-page-laptop: 75rem; /* 1200 px */
-    --breakpoint-page-tablet: 61.875rem; /* 990 px */
-    --breakpoint-page-smartphone: 46.875rem; /* 750 px */
+    --breakpoint-page-desktop: 87.5rem; /* 1400 px */
+    --breakpoint-page-laptop: 68.75rem; /* 1100 px */
+    --breakpoint-page-tablet: 56.25rem; /* 900 px */
+    --breakpoint-page-smartphone: 43.75rem; /* 700 px */
     --breakpoint-page-mobile: 33.75rem; /* 540 px */
  
     --max-width-container-max: 93.75rem; /* 1500px */
@@ -216,7 +218,8 @@ h1{
 }
 
 h2, h3 {
-    font-family: var(--font-family-montserrat)
+    font-family: var(--font-family-montserrat);
+    font-size: var(--font-size-title-md);
 }
 
 p{

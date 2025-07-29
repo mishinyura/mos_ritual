@@ -344,7 +344,7 @@ ______________*/
   font-size: var(--font-size-title-lg);
 }
 .hero__title{
-  margin-bottom: var(--margint-bottom-title-desktop);
+  margin-bottom: var(--margin-bottom-title-desktop);
 }
 .hero__description{
   font-size: var(--font-size-text-lg);
@@ -368,9 +368,7 @@ ______________*/
   content: url('../media/icons/click.png');
 }
 .hero__advantages{
-  display: flex;
-  flex-direction: column;
-  justify-content: stretch;
+  flex-shrink: 0;
 }
 .hero__advant{
   position: relative;
@@ -446,7 +444,7 @@ ______________*/
   display: none;
 }
 .calling__title{
-  margin-bottom: var(--margint-bottom-title-desktop);
+  margin-bottom: var(--margin-bottom-title-desktop);
   font-family: var(--font-family-montserrat);
   /* font-size: var(--font-size-title-sm); */
   font-weight: 600;
@@ -626,7 +624,7 @@ ______________*/
   font-size: var(--font-size-title-md);
 }
 .services__title{
-  margin-bottom: var(--margint-bottom-title-desktop);
+  margin-bottom: var(--margin-bottom-title-desktop);
 }
 .services__description{
   font-size: var(--font-size-text-md);
@@ -634,6 +632,7 @@ ______________*/
 .services__list{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 1fr;
   gap: 10px;
 }
 .services__item{
@@ -767,7 +766,7 @@ ______________*/
   font-size: var(--font-size-title-md);
 }
 .reviews__title{
-  margin-bottom: var(--margint-bottom-title-desktop)
+  margin-bottom: var(--margin-bottom-title-desktop)
 }
 .reviews__description{
   margin-bottom: var(--margin-bottom-descr-desktop);
@@ -824,7 +823,7 @@ ______________*/
   user-select: none;
 }
 .answers__title{
-  margin-bottom: var(--margint-bottom-title-desktop);
+  margin-bottom: var(--margin-bottom-title-desktop);
   font-size: var(--font-size-title-md);
 }
 .answers__content{
@@ -901,7 +900,7 @@ ______________*/
   display: none;
 }
 .callback__title{
-  margin-bottom: var(--margint-bottom-title-desktop);
+  margin-bottom: var(--margin-bottom-title-desktop);
   font-family: var(--font-family-montserrat);
   /* font-size: var(--font-size-title-sm); */
   font-weight: 600;
@@ -1194,7 +1193,7 @@ ______________*/
   min-width: 0;
 }
 .footer__subtitle{
-  margin-bottom: var(--margint-bottom-title-desktop);
+  margin-bottom: var(--margin-bottom-title-desktop);
 }
 .footer__item:not(:last-child){
   margin-bottom: 10px;
