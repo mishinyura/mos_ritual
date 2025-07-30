@@ -19,6 +19,7 @@
 
 
     .reviews__container{
+        display: block;
         max-width: var(--max-width-container-desktop);
     }
 

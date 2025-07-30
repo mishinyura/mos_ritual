@@ -65,10 +65,21 @@ let reviewsSlider = new Swiper('.reviews__slider', {
   direction: 'horizontal',
   loop: true,
   slidesPerView: 3,
-  spaceBetween:  30,
+  spaceBetween:  10,
   wrapperClass: 'reviews__wrapper',
   slideClass: 'reviews__slide',
   watchSlidesProgress: true,
+  breakpoints: {
+    900: {
+      slidesPerView: 3
+    },
+    540: {
+      slidesPerView: 2
+    },
+    320: {
+      slidesPerView: 1
+    }
+  },
   on: {
     progress(reviewsSlider) {
       reviewsSlider.slides.forEach((slide) => {
