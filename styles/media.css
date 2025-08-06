@@ -236,6 +236,9 @@
     .products__container{
         max-width: var(--max-width-container-tablet);
     }
+    .tariffs__rate{
+        display: block;
+    }
 }
 
 /* 700 px */
@@ -569,6 +572,10 @@
         max-width: var(--max-width-container-mobile);
         padding: var(--padding-tb-container-mobile) var(--padding-lr-container-mobile);
     }
+    .answers__title{
+        margin-bottom: var(--margin-bottom-title-mobile);
+        font-size: var(--font-size-title-sm);
+    }
     .answers__question{
         font-size: var(--font-size-text-sm);
     }
@@ -590,6 +597,10 @@
     .products__container{
         max-width: var(--max-width-container-mobile);
         padding: var(--padding-tb-container-mobile) var(--padding-lr-container-mobile);
+    }
+    .products__title{
+        margin-bottom: var(--margin-bottom-title-mobile);
+        font-size: var(--font-size-title-sm);
     }
 
 

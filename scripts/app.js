@@ -64,15 +64,12 @@ let body = document.querySelector('.body')
 let reviewsSlider = new Swiper('.reviews__slider', {
   direction: 'horizontal',
   loop: true,
-  slidesPerView: 3,
+  slidesPerView: 2,
   spaceBetween:  10,
   wrapperClass: 'reviews__wrapper',
   slideClass: 'reviews__slide',
   watchSlidesProgress: true,
   breakpoints: {
-    900: {
-      slidesPerView: 3
-    },
     540: {
       slidesPerView: 2
     },
@@ -96,6 +93,10 @@ let reviewsSlider = new Swiper('.reviews__slider', {
     }
   }
 });
+
+
+
+
 
 
 // new Slider({

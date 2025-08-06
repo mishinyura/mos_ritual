@@ -1100,11 +1100,11 @@ ______________*/
 }
 
 
-.tariffs{
-  /* display: flex;
-  justify-content: space-between; */
-}
+/* .tariffs{
+  
+} */
 .tariffs__rate{
+  position: relative;
   display: flex;
   padding: 1.5em;
   font-size: var(--font-size-title-sm);
@@ -1123,6 +1123,7 @@ ______________*/
 }
 .tariffs__description{
   margin-bottom: 30px;
+  font-size: var(--font-size-text-md);
 }
 .tariffs__price{
   padding: .5em;
@@ -1180,7 +1181,6 @@ ______________*/
   background-color: var(--color-bg-blue);
   color: var(--color-text-white);
   box-shadow: inset 0 0 10px 0 white;
-  /* animation: heartbeat 2s ease-in-out infinite; */
 }
 .tariffs__btn::before{
   margin-right: 15px;
