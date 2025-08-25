@@ -1,0 +1,5 @@
+.product__container{
+    max-width: var(--max-width-container-max);
+    padding: var(--padding-tb-container-desktop) var(--padding-lr-container-desktop);
+    margin: auto;
+}

@@ -1,0 +1,88 @@
+{
+    "coffins": [
+        {
+            "article": "ЛГ10010",
+            "subcategory": "Гробы лакированные",
+            "name": "Стандарт Б-4",
+            "description": "Какое то описание гроба",
+            "images": ["/media/images/coffin.jpg", "/media/images/coffin_2.jpg", "/media/images/coffin_3.jpg"],
+            "slug": "coffin_b6",
+            "newPrice": 8000,
+            "oldPrice": 10000,
+            "params": {
+                "height": [1.7, 1.8, 1.9, 2.0, 2.1],
+                "type": ["Стандарт", "Колода", "Спецколода", "Домовина"],
+                "color": ["#444", "#333"]
+            }
+        },
+        {
+            "article": "ЛГ10011",
+            "subcategory": "Гробы лакированные",
+            "name": "Стандарт Б-6",
+            "description": "Какое то описание гроба",
+            "images": ["/media/images/coffin.jpg", "/media/images/coffin_2.jpg", "/media/images/coffin_3.jpg"],
+            "slug": "coffin_b6",
+            "newPrice": 10000,
+            "params": {
+                "price": 13000,
+                "height": [1.7, 1.8, 1.9, 2.0, 2.1],
+                "type": ["Стандарт", "Колода", "Спецколода", "Домовина"],
+                "color": ["#444", "#333"]
+            }
+        },
+        {
+            "article": "ЛГ10012",
+            "subcategory": "Гробы лакированные",
+            "name": "Печаль Б-4",
+            "description": "Какое то описание гроба",
+            "images": ["/media/images/coffin.jpg", "/media/images/coffin_2.jpg", "/media/images/coffin_3.jpg"],
+            "slug": "coffin_b6",
+            "newPrice": 10000,
+            "oldPrice": 12000,
+            "params": {
+                "height": [1.7, 1.8, 1.9, 2.0, 2.1],
+                "type": ["Стандарт", "Колода", "Спецколода", "Домовина"]
+            }
+        },
+        {
+            "article": "ЛГ10013",
+            "subcategory": "Гробы лакированные",
+            "name": "Печаль Б-6",
+            "description": "Какое то описание гроба",
+            "images": [],
+            "slug": "coffin_b6",
+            "newPrice": 10000,
+            "oldPrice": 12000,
+            "params": {
+                "height": [1.7, 1.8, 1.9, 2.0, 2.1],
+                "type": ["Стандарт", "Колода", "Спецколода", "Домовина"]
+            }
+        },
+        {
+            "article": "ЛГ10014",
+            "subcategory": "Гробы лакированные",
+            "name": "Классика Б-4",
+            "description": "Какое то описание гроба",
+            "images": ["/media/images/coffin.jpg", "/media/images/coffin_2.jpg", "/media/images/coffin_3.jpg"],
+            "slug": "coffin_b6",
+            "newPrice": 10000,
+            "oldPrice": 12000,
+            "params": {
+                "height": [1.7, 1.8, 1.9, 2.0],
+                "type": ["Стандарт", "Колода"],
+                "color": ["#444", "#333"]
+            }
+        },
+        {
+            "article": "ЛГ10015",
+            "subcategory": "Гробы лакированные",
+            "name": "Классика Б-6",
+            "description": "Какое то описание гроба",
+            "images": ["/media/images/coffin.jpg", "/media/images/coffin_2.jpg", "/media/images/coffin_3.jpg"],
+            "slug": "coffin_b6",
+            "newPrice": 10000,
+            "oldPrice": 12000,
+            "params": {}
+        }
+    ]
+}

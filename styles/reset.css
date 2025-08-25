@@ -20,6 +20,8 @@
     --color-border-grey: #C7C7C7;
 
     --liear-gradient-text-gold: linear-gradient(162deg,rgba(205, 195, 156, 1) 20%, rgba(103, 98, 78, 1) 100%);
+    
+    --linear-gradient-bg-grey: linear-gradient(290deg,rgba(235, 235, 235, 1) 0%, rgba(245, 245, 245, 1) 100%);
 
     /* Отступы */
     --padding-lr-container-desktop: 1.25em; /* 20px */
@@ -50,11 +52,15 @@
     --max-width-container-mobile: 100%;
     
     
-    /* Радиусы */
+    /* Радиусы и рамки */
     --radius-sm: 2px;
     --radius-md: 5px;
     --radius-lg: 10px;
     --radius-max: 25px;
+
+    --border-grey: 1px solid #C7C7C7;
+
+    --shadow-md: 0 8px 20px rgba(0,0,0,0.15);
     
     /* Шрифты */
     --font-family-cormorant-garamond: 'Cormorant Garamond', 'Times New Roman', 'Georgia', 'Times', serif;

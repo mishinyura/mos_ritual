@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Ритуальные принадлежности в магазине Московский Ритуал</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="catalog" />
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/catalog.css">
+    <link rel="stylesheet" href="styles/media.css">
+    <script src="scripts/utils.js"></script>
+    <script src="scripts/objects.js"></script>
+    <script src="scripts/modules.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+    <script src="scripts/modules/vue.global.js"></script>
+    <script src="scripts/initializer.js" defer></script>
+    <script src="scripts/app.js" defer></script>
+</head>
+<body class="body">
+    <svg class="body__icons">
+        <symbol id="icon-table-view" viewBox="0 0 18 18" fill="transparent">
+            <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M1 12V13.8002C1 14.9203 1 15.4801 1.21799 15.9079C1.40973 16.2842 1.71547 16.5905 2.0918 16.7822C2.5192 17 3.07899 17 4.19691 17H9M1 12V6M1 12H9M1 6V4.2002C1 3.08009 1 2.51962 1.21799 2.0918C1.40973 1.71547 1.71547 1.40973 2.0918 1.21799C2.51962 1 3.08009 1 4.2002 1H9M1 6H9M9 1H13.8002C14.9203 1 15.4801 1 15.9079 1.21799C16.2842 1.40973 16.5905 1.71547 16.7822 2.0918C17 2.5192 17 3.07899 17 4.19691V6M9 1V6M9 6V12M9 6H17M9 12V17M9 12H17M9 17H13.8036C14.9215 17 15.4805 17 15.9079 16.7822C16.2842 16.5905 16.5905 16.2842 16.7822 15.9079C17 15.4805 17 14.9215 17 13.8036V12M17 12V6"/>
+        </symbol>
+        <symbol id="icon-row-view" viewBox="1 1.5 28 26" fill="transparent">
+            <path fill="currentColor" d="M 5 2 L 25 2 A 1 1 0 0 1 25 9 L 5 9 A 1 1 0 0 1 5 2 M 5 11 L 25 11 A 1 1 0 0 1 25 18 L 5 18 A 1 1 0 0 1 5 11 M 5 20 L 25 20 A 1 1 0 0 1 25 27 L 5 27 A 1 1 0 0 1 5 20" fill="#000000"/>
+        </symbol>
+    </svg>
+    <header class="header">
+        <div class="header__container">
+            <div class="header__head">
+                <a href="/" class="header__logo" tabindex="0">
+                    <img src="media/images/logo_gold.png" alt="">
+                    <strong>Московский ритуал</strong>
+                </a>
+                <div class="header__description">
+                    Официальный сайт службы ритуальных услуг
+                </div>
+                <div class="header__control">
+                    <div class="header__socials">
+                        <p class="header__description">
+                            напишите в любой удобный мессенджер
+                        </p>
+                        <div class="messengers">
+                            <a href="#" class="header__messenger" tabindex="0">
+                                <svg width="30" height="30">
+                                    <use xlink:href="#icon-tg"></use>
+                                </svg>
+                            </a>
+                            <a href="#" class="header__messenger" tabindex="0">
+                                <svg width="30" height="30">
+                                    <use xlink:href="#icon-vk"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <button class="header__btn header__btn_cosult" tabindex="0">
+                        <svg class="header__icon-btn" xmlns="http://www.w3.org/2000/svg" width="22" height="22">
+                            <path fill="none" fill-rule="evenodd" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 15.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.11 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 15.92z"></path>
+                        </svg>
+                        <span class="header__text-btn">Консультация</span>
+                    </button>
+                    <button class="header__btn header__btn_burger">
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+            <nav class="header__nav navbar">
+                <ul class="navbar__list">
+                    <li class="navbar__item">
+                        <a href="#" class="navbar__link" tabindex="0">
+                            Основная
+                        </a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="#" class="navbar__link" tabindex="0">
+                            Ритуальные услуги
+                        </a>
+                        <ul class="navbar__sublist">
+                            <li class="navbar__subitem">
+                                <a href="#" class="navbar__sublink" tabindex="0">
+                                    Агентское сопровождение
+                                </a>
+                            </li>
+                            <li class="navbar__subitem">
+                                <a href="#" class="navbar__sublink" tabindex="0">
+                                    Кремация
+                                </a>
+                            </li>
+                            <li class="navbar__subitem">
+                                <a href="#" class="navbar__sublink" tabindex="0">
+                                    Похороны
+                                </a>
+                            </li>
+                            <li class="navbar__subitem">
+                                <a href="#" class="navbar__sublink" tabindex="0">
+                                    Транспортировка тела
+                                </a>
+                            </li>
+                            <li class="navbar__subitem">
+                                <a href="#" class="navbar__sublink" tabindex="0">
+                                    Отпевание
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="#" class="navbar__link active" tabindex="0">
+                            Ритуальные принадлежности
+                        </a>
+                        <ul class="navbar__sublist">
+                            <li class="navbar__subitem">
+                                <a href="#" class="navbar__sublink" tabindex="0">
+                                    Гробы
+                                </a>
+                            </li>
+                            <li class="navbar__subitem">
+                                <a href="#" class="navbar__sublink" tabindex="0">
+                                    Текстиль
+                                </a>
+                            </li>
+                            <li class="navbar__subitem">
+                                <a href="#" class="navbar__sublink" tabindex="0">
+                                    Фурнитура
+                                </a>
+                            </li>
+                            <li class="navbar__subitem">
+                                <a href="#" class="navbar__sublink" tabindex="0">
+                                    Могильные кресты
+                                </a>
+                            </li>
+                            <li class="navbar__subitem">
+                                <a href="#" class="navbar__sublink" tabindex="0">
+                                    Венки
+                                </a>
+                            </li>
+                            <li class="navbar__subitem">
+                                <a href="#" class="navbar__sublink" tabindex="0">
+                                    Корзины
+                                </a>
+                            </li>
+                            <li class="navbar__subitem">
+                                <a href="#" class="navbar__sublink" tabindex="0">
+                                    Похоронные костюмы
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="#" class="navbar__link" tabindex="0">
+                            Полезная информация
+                        </a>
+                        <ul class="navbar__sublist">
+                            <li class="navbar__subitem">
+                                <a href="#" class="navbar__sublink" tabindex="0">
+                                    Крематории
+                                </a>
+                            </li>
+                            <li class="navbar__subitem">
+                                <a href="#" class="navbar__sublink" tabindex="0">
+                                    Кладбища
+                                </a>
+                            </li>
+                            <li class="navbar__subitem">
+                                <a href="#" class="navbar__sublink" tabindex="0">
+                                    Морги
+                                </a>
+                            </li>
+                            <li class="navbar__subitem">
+                                <a href="#" class="navbar__sublink" tabindex="0">
+                                    Храмы
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="main">
+        <section class="main__section products">
+            <div class="products__container">
+                <ul class="products__list">
+                    <li class="products__item">
+                        <a href="#" class="products__link">
+                            Гробы
+                        </a>
+                    </li>
+                    <li class="products__item">
+                        <a href="#" class="products__link">
+                            Текстиль
+                        </a>
+                    </li>
+                    <li class="products__item">
+                        <a href="#" class="products__link">
+                            Кресты
+                        </a>
+                    </li>
+                    <li class="products__item">
+                        <a href="#" class="products__link">
+                            Фурнитура
+                        </a>
+                    </li>
+                    <li class="products__item">
+                        <a href="#" class="products__link">
+                            Венки
+                        </a>
+                    </li>
+                    <li class="products__item">
+                        <a href="#" class="products__link">
+                            Одежда
+                        </a>
+                    </li>
+                </ul>
+                <h1 class="products__title">
+                    Гробы
+                </h1>
+            </div>
+        </section>
+        <section class="main__section catalog">
+            <div class="catalog__container">
+                <div class="catalog__filters control" id="filters">
+                    <div class="control__filter">
+                        <span class="control__name">
+                            Категория
+                        </span>
+                        <div class="control__choice">
+                            <label class="control__wrapper control__wrapper_chb">
+                                <input class="control__input control__input_chb" type="checkbox">
+                                <span class="control__checkbox"></span>
+                                <span class="control__placeholder">Лакированные</span>
+                            </label>
+                            <label class="control__wrapper control__wrapper_chb">
+                                <input class="control__input control__input_chb" type="checkbox">
+                                <span class="control__checkbox"></span>
+                                <span class="control__placeholder">Комбинированные</span>
+                            </label>
+                            <label class="control__wrapper control__wrapper_chb">
+                                <input class="control__input control__input_chb" type="checkbox">
+                                <span class="control__checkbox"></span>
+                                <span class="control__placeholder">Обитые тканью</span>
+                            </label>
+                            <label class="control__wrapper control__wrapper_chb">
+                                <input class="control__input control__input_chb" type="checkbox">
+                                <span class="control__checkbox"></span>
+                                <span class="control__placeholder">Двухкрышечные</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="control__filter">
+                        <span class="control__name">
+                            Объем гроба
+                        </span>
+                        <div class="control__choice">
+                            <label class="control__wrapper control__wrapper_chb">
+                                <input class="control__input control__input_chb" type="checkbox">
+                                <span class="control__checkbox"></span>
+                                <span class="control__placeholder">Стандарт</span>
+                            </label>
+                            <label class="control__wrapper control__wrapper_chb">
+                                <input class="control__input control__input_chb" type="checkbox">
+                                <span class="control__checkbox"></span>
+                                <span class="control__placeholder">Колода</span>
+                            </label>
+                            <label class="control__wrapper control__wrapper_chb">
+                                <input class="control__input control__input_chb" type="checkbox">
+                                <span class="control__checkbox"></span>
+                                <span class="control__placeholder">Спецколода</span>
+                            </label>
+                            <label class="control__wrapper control__wrapper_chb">
+                                <input class="control__input control__input_chb" type="checkbox">
+                                <span class="control__checkbox"></span>
+                                <span class="control__placeholder">Домовина</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalog__content">
+                    <div class="catalog__head view">
+                        <div class="view__sort">
+                            <span class="view__text">
+                                Сортировать:
+                            </span>
+                            <div class="view__select">
+                                <lable class="view__wrapper view__wrapper_sort">
+                                    <input class="view__input" name="sort" type="text" value="Популярные" data-sort="popular" readonly>
+                                </lable>
+                                <ul class="view__list">
+                                    <li class="view__item" data-sort="asc">
+                                        От А до Я
+                                    </li>
+                                    <li class="view__item selected" data-sort="desc">
+                                        От Я до А
+                                    </li>
+                                    <li class="view__item" data-sort="asc-price">
+                                        Дешевле
+                                    </li>
+                                    <li class="view__item" data-sort="desc-price">
+                                        Дороже
+                                    </li>
+                                    <li class="view__item" data-sort="popular">
+                                        Популярные
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="view__btns">
+                            <button class="view__btn" data-view="table">
+                                <svg>
+                                    <use xlink:href="#icon-table-view"></use>
+                                </svg>
+                            </button>
+                            <button class="view__btn" data-view="row">
+                                <svg>
+                                    <use xlink:href="#icon-row-view"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="catalog__list cards cards_table">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    <div class="overlay">
+        <div class="main__modal settings-product">
+            <div class="settings-product__container">
+                <button class="settings-product__btn"></button>
+                <h4 class="settings-product__title">
+                    В корзину
+                </h4>
+                <div class="settings-product__product">
+                    <a href="" class="settings-product__link">
+
+                    </a>
+                    <span class="settings-product__price">
+
+                    </span>
+                </div>
+                <div class="settings-product__params">
+                    <div class="settings-product__param">
+                        <div class="settings-product__name">
+                            Длина
+                        </div>
+                        <input type="text" class="settings-product__value" value="200">
+                        <div class="settings-product__options">
+
+                        </div>
+                    </div>
+                    <div class="settings-product__param">
+                        <div class="settings-product__name">
+                            Длина
+                        </div>
+                        <div class="settings-product__select">
+                            <lable class="settings-product__wrapper">
+                                <input class="settings-product__input" name="sort" type="text" value="1.8" data-long="long" readonly>
+                            </lable>
+                            <ul class="settings-product__list">
+                                <li class="settings-product__item" data-long="asc">
+                                    1.6
+                                </li>
+                                <li class="settings-product__item" data-long="desc">
+                                    1.7
+                                </li>
+                                <li class="settings-product__item selected" data-long="asc-price">
+                                    1.8
+                                </li>
+                                <li class="settings-product__item" data-long="desc-price">
+                                    1.9
+                                </li>
+                                <li class="settings-product__item" data-long="popular">
+                                    2.0
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
