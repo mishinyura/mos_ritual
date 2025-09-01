@@ -50,6 +50,40 @@ class Select{
     }
 }
 
+class Tabs{
+    constructor(root){
+        this.clsRoot = root;
+        this.root = document.querySelector(root);
+        this.btns = this.root.querySelectorAll('button');
+        this.activeBtn = this.btns[0]
+        this.details = this.root.querySelectorAll(`${root}__detail`);
+
+        if (this.btns.length != this.details.length) {
+            new Error('Количество табов и детальных страниц не совпадает')
+        }
+
+        for (let btn of this.btns) {
+            btn.addEventListener('click', this.clickTab.bind(this))
+        }
+
+    }
+
+    clickTab(btn) {
+        let data = btn.target.dataset['tabs'];
+        let detailActive = this.root.querySelector(`${this.clsRoot}__detail[data-tabs=${data}]`)
+        this.activeBtn.classList.remove('active')
+        for (let detail of this.details) {
+            if (detail === detailActive) {
+                detail.classList.add('active')
+                btn.target.classList.add('active')
+                this.activeBtn = btn.target
+            } else {
+                detail.classList.remove('active')
+            }
+        }
+    }
+}
+
 
 class Menu{
     constructor(settings) {
@@ -145,7 +179,6 @@ class Accordion{
         let detail = btn.nextElementSibling
         detail.classList.add('open')
         btn.classList.add('open')
-        console.log(detail)
     }
 
     close(btn){
@@ -182,6 +215,11 @@ class Basket{
     }
 }
 
+class Modal{
+    constructor() {
+
+    }
+}
 
 /** 
  * Класс конструктор HTML элементов карточки товара
@@ -456,6 +494,11 @@ class Card{
             this.refs.counter.children[obj.index].classList.add('active')
         }
         
+    }
+
+
+    editSettingModal() {
+
     }
 }
 

@@ -1,4 +1,4 @@
-const { createApp, ref, computed } = Vue;
+// const { createApp, ref, computed } = Vue;
 // import coffins from "./data.json" assert { type: "json" };
 
 
@@ -216,7 +216,40 @@ class IndexPage {
             }
         }
     });
-    constructor() {
+}
 
+class ProductDetailPage {
+    constructor() {
+        // reviewsSlider = new Swiper('.product__slider', {
+        //     direction: 'horizontal',
+        //     loop: true,
+        //     slidesPerView: 1,
+        //     spaceBetween: 10,
+        //     watchSlidesProgress: true
+        // });
+        let galleryThumbs = new Swiper('#thumps', {
+            direction: 'vertical',
+            spaceBetween: 10,
+            slidesPerView: 4,
+            loop: true,
+            freeMode: true,
+            loopedSlides: 5,
+            watchSlidesProgress: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            }
+        });
+        let galleryTop = new Swiper('#photo', {
+            spaceBetween: 10,
+            loop: true,
+            loopedSlides: 5,
+            thumbs: {
+                swiper: galleryThumbs,
+            }
+        });
+
+        new Tabs('.tabs')
     }
+    
 }

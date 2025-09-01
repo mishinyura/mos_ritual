@@ -283,6 +283,7 @@ ______________*/
   font-family: var(--font-family-montserrat);
   font-size: var(--font-size-text-xs);
   font-weight: 400;
+  cursor: pointer;
 }
 .calling__checkbox input{
   display: none;
@@ -582,8 +583,8 @@ ______________*/
 .answers__subtitle::before{
   position: absolute;
   left: 0;
-  width: 20px;
-  height: 20px;
+  width: 10px;
+  height: 10px;
   border-radius: 50px;
   outline: 2px solid var(--color-bg-gold);
   outline-offset: 0;
@@ -804,6 +805,23 @@ ______________*/
   var(--padding-lr-container-desktop);
   margin: auto;
   user-select: none;
+}
+.products__head{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+.products__btn{
+  padding: 10px;
+  border: var(--border-blue);
+}
+.products__btn.active{
+  color: var(--color-text-white);
+  background-color: var(--color-bg-blue);
+}
+.products__btn:not(:last-child) {
+  margin-right: 10px;
 }
 
 

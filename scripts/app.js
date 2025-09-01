@@ -22,6 +22,9 @@ function main() {
     case 'catalog': new CatalogPage() 
     break;
     case 'index': new IndexPage()
+    break;
+    case 'product-detail': new ProductDetailPage()
+    break;
   }
   
 }

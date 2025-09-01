@@ -4,13 +4,15 @@
     <title>Гроб</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="title" content="catalog" />
+    <meta name="title" content="product-detail" />
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/product-detail.css">
     <link rel="stylesheet" href="styles/media.css">
+    <script src="scripts/utils.js"></script>
+    <script src="scripts/objects.js"></script>
     <script src="scripts/modules.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
     <script src="scripts/modules/vue.global.js"></script>
@@ -25,6 +27,31 @@
         <symbol id="icon-row-view" viewBox="1 1.5 28 26" fill="transparent">
             <path fill="currentColor" d="M 5 2 L 25 2 A 1 1 0 0 1 25 9 L 5 9 A 1 1 0 0 1 5 2 M 5 11 L 25 11 A 1 1 0 0 1 25 18 L 5 18 A 1 1 0 0 1 5 11 M 5 20 L 25 20 A 1 1 0 0 1 25 27 L 5 27 A 1 1 0 0 1 5 20" fill="#000000"/>
         </symbol>
+        <symbol id="icon-vk" viewBox="0 0 215 215">
+            <circle fill="#currentColor" cx="107.5" cy="107.5" r="107.5" />
+            <path fill="#fff"
+                d="M111.44,147.14C69.76,147.14,46,118.56,45,71H65.87c.69,34.9,16.08,49.69,28.27,52.74V71h19.67v30.1c12-1.29,24.69-15,28.95-30.1h19.67c-3.28,18.59-17,32.31-26.75,37.95A60.16,60.16,0,0,1,167,147.14H145.36c-4.65-14.48-16.24-25.68-31.55-27.2v27.2Z" />
+        </symbol>
+        <symbol id="icon-tg" viewBox="0 0 215 215">
+            <circle fill="#currentColor" cx="107.5" cy="107.5" r="107.5" />
+            <path fill="#fff"
+                d="M603.31,105.65q46.89-20.43,62.53-26.94c29.78-12.38,36-14.53,40-14.61A7.09,7.09,0,0,1,710,65.35a4.49,4.49,0,0,1,1.53,2.9,19.25,19.25,0,0,1,.18,4.23c-1.61,17-8.6,58.09-12.15,77.08-1.5,8-4.46,10.73-7.33,11-6.22.57-11-4.12-17-8.07-9.44-6.19-14.77-10-23.93-16.08-10.59-7-3.72-10.81,2.31-17.07,1.58-1.64,29-26.6,29.54-28.86a2.18,2.18,0,0,0-.5-1.9,2.49,2.49,0,0,0-2.22-.21q-1.41.31-45.22,29.89-6.42,4.41-11.63,4.3c-3.83-.09-11.19-2.17-16.67-4-6.71-2.18-12-3.33-11.58-7Q595.7,108.68,603.31,105.65Z"
+                transform="translate(-554)" />
+        </symbol>
+        <symbol id="icon-phone" viewBox="0 0 215 215">
+            <circle fill="#currentColor" cx="107.5" cy="107.5" r="107.5" />
+            <g transform="translate(107.5,107.5) scale(0.2227) translate(-256,-256)">
+                <path fill="#fff" d="M462.491,468.206l-33.938,33.937c-6.062,6.031-23.812,9.844-24.343,9.844
+                c-107.435,0.905-210.869-41.279-286.882-117.31C41.097,318.46-1.136,214.619,0.036,106.872c0-0.063,3.891-17.312,9.938-23.312
+                l33.937-33.968c12.453-12.437,36.295-18.062,52.998-12.5l7.156,2.406c16.703,5.562,34.155,23.999,38.78,40.967l17.093,62.717
+                c4.64,17-1.594,41.186-14.031,53.623l-22.687,22.687c22.25,82.467,86.919,147.121,169.339,169.402l22.687-22.688
+                c12.438-12.438,36.687-18.656,53.687-14.031l62.718,17.125c16.937,4.594,35.374,22.03,40.968,38.748l2.375,7.156
+                C480.552,431.926,474.928,455.769,462.491,468.206z M287.996,255.993h31.999c0-35.343-28.655-63.998-63.998-63.998v31.999
+                C273.636,223.994,287.996,238.368,287.996,255.993z M415.992,255.993c0-88.373-71.623-159.996-159.995-159.996v32
+                c70.591,0,127.996,57.436,127.996,127.996H415.992z M255.997,0v31.999c123.496,0,223.993,100.497,223.993,223.994h31.999
+                C511.989,114.622,397.368,0,255.997,0z"/>
+            </g>
+        </symbol>
     </svg>
     <header class="header">
         <div class="header__container">
@@ -32,34 +59,25 @@
                 <a href="/" class="header__logo" tabindex="0">
                     <img src="media/images/logo_gold.png" alt="">
                     <strong>Московский ритуал</strong>
+                    <span class="header__description">
+                        Официальный сайт службы ритуальных услуг
+                    </span>
                 </a>
-                <div class="header__description">
-                    Официальный сайт службы ритуальных услуг
-                </div>
                 <div class="header__control">
-                    <div class="header__socials">
-                        <p class="header__description">
-                            <strong>Задайте вопрос</strong>
-                            напишите в любой удобный мессенджер
-                        </p>
-                        <div class="messengers">
-                            <a href="#" class="header__messenger" tabindex="0">
-                                <svg width="30" height="30">
-                                    <use xlink:href="#icon-tg"></use>
-                                </svg>
-                            </a>
-                            <a href="#" class="header__messenger" tabindex="0">
-                                <svg width="30" height="30">
-                                    <use xlink:href="#icon-vk"></use>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                    <button class="header__btn header__btn_cosult" tabindex="0">
-                        <svg class="header__icon-btn" xmlns="http://www.w3.org/2000/svg" width="22" height="22">
-                            <path fill="none" fill-rule="evenodd" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 15.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.11 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 15.92z"></path>
+                    <a href="#" class="header__btn header__btn_messenger" tabindex="0">
+                        <svg>
+                            <use xlink:href="#icon-tg"></use>
                         </svg>
-                        <span class="header__text-btn">Консультация</span>
+                    </a>
+                    <a href="#" class="header__btn header__btn_messenger" tabindex="0">
+                        <svg>
+                            <use xlink:href="#icon-vk"></use>
+                        </svg>
+                    </a>
+                    <button class="header__btn header__btn_messenger" tabindex="0">
+                        <svg>
+                            <use xlink:href="#icon-phone"></use>
+                        </svg>
                     </button>
                     <button class="header__btn header__btn_burger">
                         <span></span>
@@ -69,7 +87,7 @@
             <nav class="header__nav navbar">
                 <ul class="navbar__list">
                     <li class="navbar__item">
-                        <a href="#" class="navbar__link" tabindex="0">
+                        <a href="#" class="navbar__link active" tabindex="0">
                             Основная
                         </a>
                     </li>
@@ -106,7 +124,7 @@
                         </ul>
                     </li>
                     <li class="navbar__item">
-                        <a href="#" class="navbar__link active" tabindex="0">
+                        <a href="#" class="navbar__link" tabindex="0">
                             Ритуальные принадлежности
                         </a>
                         <ul class="navbar__sublist">
@@ -174,6 +192,11 @@
                             </li>
                         </ul>
                     </li>
+                    <li class="navbar__item">
+                        <a href="#footer" class="navbar__link" tabindex="0">
+                            Компания
+                        </a>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -202,44 +225,111 @@
                     <h1 class="product__title">
                         Лакированный гроб "Печаль Б-4"
                     </h1>
-                    <div class="swiper">
-                        <!-- Additional required wrapper -->
-                        <div class="swiper-wrapper">
-                            <!-- Slides -->
-                            <div class="swiper-slide">Slide 1</div>
-                            <div class="swiper-slide">Slide 2</div>
-                            <div class="swiper-slide">Slide 3</div>
-                            ...
-                        </div>
-                        <!-- If we need pagination -->
-                        <div class="swiper-pagination"></div>
-
-                        <!-- If we need navigation buttons -->
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-button-next"></div>
-
-                        <!-- If we need scrollbar -->
-                        <div class="swiper-scrollbar"></div>
-                    </div>
-                    <ul class="product__tabs">
-                        <li class="product__tab">
-                            <label for="" class="product__label">
-                                <input type="checkbox" class="product__input">
-                                <span class="product__btn">
-                                    Описание
-                                </span>
-                            </label>
-                            <div class="product__detail">
-                                
+                    <div class="product__media">
+                        <div class="product__slider swiper" id="thumps">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="media/images/coffin.jpg" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="media/images/coffin_2.jpg" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="media/images/coffin_3.jpg" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="media/images/coffin_3.jpg" alt="">
+                                </div>
                             </div>
-                        </li>
-                        <li class="product__tab">
-                            Характеристика
-                        </li>
-                    </ul>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                        </div>
+                        <div class="product__slider swiper" id="photo">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="media/images/coffin.jpg" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="media/images/coffin_2.jpg" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="media/images/coffin_3.jpg" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="media/images/coffin_3.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__details tabs">
+                        <div class="tabs__btns">
+                            <button class="tabs__btn active" data-tabs="description">
+                                Описание
+                            </button>
+                            <button class="tabs__btn" data-tabs="parameter">
+                                Характеристики
+                            </button>
+                        </div>
+                        <div class="tabs__details">
+                            <div class="tabs__detail active" data-tabs="description">
+                                <p class="tabs__description">
+                                    Гроб "М13" - это изысканное изделие, созданное для тех, кто ценит качество и эстетику в последний путь. Его размер составляет 170 до 200 сантиметров.
+                                    Покрытие гроба выполнено в глянцевом светло-ореховом цвете и красивым рисунком по крышке и гробу, придавая ему изысканный и изящный вид.
+                                    Изготовленный из высококачественной мебельной фанеры. Постель внутри гроба выполнена из атласа.
+                                    Фурнитура гроба М13 выполнена из металлопластика, что придает ему дополнительную изысканность и красоту. Этот гроб станет достойным последним прибежищем для вашего близкого человека, выразив вашу заботу и уважение к нему в последний путь.
+                                </p>
+                            </div>
+                            <div class="tabs__detail" data-tabs="parameter">
+                                <ul class="tabs__list">
+                                    <li class="tabs__item">
+                                        22222222
+                                    </li>
+                                    <li class="tabs__item">
+                                        22222222
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="product__control">
-
+                <div class="product__conditions">
+                    <div class="product__control">
+                        <div class="product__prices">
+                            <span class="product__price product__price_new">
+                                15000
+                            </span>
+                            <span class="product__price product__price_old">
+                                18000
+                            </span>
+                        </div>
+                        <p class="product__description">
+                            Гроб "М13" от компании Элит гроб купить
+                        </p>
+                        <div class="product__options param">
+                            <span class="param__name">
+                                Длина
+                            </span>
+                            <ul class="param__options">
+                                <li class="param__option active">
+                                    1.8
+                                </li>
+                                <li class="param__option">
+                                    1.9
+                                </li>
+                                <li class="param__option">
+                                    2.0
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="product__btns">
+                            <button class="product__btn product__btn_down"></button>
+                            <input class="product__input" type="number" value="1" min="1" step="1">
+                            <button class="product__btn product__btn_up"></button>
+                        </div>
+                        <button class="product__add">
+                            В корзину
+                        </button>
+                    </div>
                 </div>
             </div>
         </section>

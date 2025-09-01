@@ -331,7 +331,6 @@ ______________*/
     margin-bottom: 5px;
 }
 .cards__price_old{
-    
     text-decoration: line-through;
 }
 .cards__price::after{

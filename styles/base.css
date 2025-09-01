@@ -18,8 +18,8 @@ ______________*/
   margin: auto;
 }
 .header__head{
-  display: grid;
-  grid-template-columns: 1fr 2fr auto;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
   gap: 30px;
   padding: 20px 0;
@@ -28,7 +28,6 @@ ______________*/
   display: flex;
   align-items: center;
   padding-right: 30px;
-  border-right: 1px solid var(--color-border-grey);
   font-family: var(--font-family-cormorant-garamond);;
   font-size: var(--font-size-text-md);
   transition: color .2s;
@@ -45,25 +44,9 @@ ______________*/
   margin-right: 15px;
 }
 .header__logo strong{
-  max-width: 150px;
-}
-.header__control{
-  display: flex;
-  align-items: center;
-}
-.header__socials{
-  display: flex;
-  align-items: center;
-  padding: 5px 10px;
-  margin-right: 20px;
-  border: 1px solid var(--color-border-grey);
-  border-radius: var(--radius-md);
-}
-.header__socials::before{
-  width: 20px;
-  height: 20px;
-  margin-right: 20px;
-  content: url('../media/icons/dialog.svg');
+  max-width: 120px;
+  margin-right: 15px;
+  border-right: 1px solid var(--color-border-grey);
 }
 .header__description{
   max-width: 200px;
@@ -71,54 +54,34 @@ ______________*/
   font-size: var(--font-size-text-xs);
   color: var(--color-text-grey);
 }
-.header__description strong{
-  display: block;
-  color: var(--color-text-black);
+.header__control{
+  display: flex;
+  align-items: center;
 }
-.header__messenger{
-  display: inline-block;
+.header__btn{
+  width: 40px;
+  height: 40px;
 }
-.header__logo:focus-visible{
-  color: var(--color-text-gold);
-}
-.header__messenger:not(:last-child){
-  margin-right: 20px;
-}
-.header__messenger svg{
-  width: 30px;
-  height: 30px;
+.header__btn svg{
+  width: 100%;
+  height: 100%;
   fill: var(--color-bg-dark-blue);
   transition: fill .2s;
 }
-.header__messenger:hover svg{
+.header__btn_messenger{
+  display: inline-block;
+}
+.header__btn_messenger:not(:last-child){
+  margin-right: 20px;
+}
+.header__btn_messenger:hover svg{
   fill: var(--color-bg-gold);
 }
-.header__messenger:focus-visible svg{
+.header__btn_messenger:focus-visible svg{
   fill: var(--color-bg-gold);
-}
-.header__btn_cosult{
-  padding: 15px 20px;
-  border-radius: var(--radius-md);
-  font-family: var(--font-family-montserrat);
-  font-size: var(--font-size-text-sm);
-  background-color: var(--color-bg-white);
-  transition: background-color .2s, color .2s;
-}
-.header__btn_cosult:hover{
-  color: var(--color-text-white);
-  background-color: var(--color-bg-gold);
-}
-.header__btn_cosult:focus-visible{
-  color: var(--color-text-white);
-  background-color: var(--color-bg-gold);
-}
-.header__icon-btn{
-  display: none;
 }
 .header__btn_burger{
   position: relative;
-  width: 40px;
-  height: 40px;
   display: none;
   border-radius: 50px;
   background-color: var(--color-bg-dark-blue);
@@ -178,16 +141,19 @@ ______________*/
 Нижнаяя часть шапки страницы
 ______________*/
 .navbar{
-  padding: 5px;
+  padding: 10px;
   border-radius: var(--radius-md);
   background-color: var(--color-bg-white);
 }
 .navbar__list{
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 .navbar__item{
   position: relative;
+  flex-grow: 1;
+  text-align: center;
 }
 .navbar__item:not(:last-child){
   margin-right: 30px;
@@ -301,7 +267,7 @@ ______________*/
 Секция Footer
 ______________*/
 .footer{
-  display: none;
+  /* display: none; */
 }
 .footer__container{
   display: flex;
@@ -374,4 +340,31 @@ ______________*/
   background: rgba(0,0,0,.5);
   transition: background 0.3s ease;
   pointer-events: none;
+}
+
+
+.breadcrumbs{
+  border-bottom: var(--border-grey);
+}
+.breadcrumbs__container{
+  display: flex;
+  align-items: center;
+  max-width: var(--max-width-container-max);
+  padding: 200px var(--padding-lr-container-desktop) 20px;
+  margin: auto;
+}
+.breadcrumbs__item{
+  display: flex;
+  align-items: center;
+}
+.breadcrumbs__item:not(:first-child)::before{
+  display: inline-block;
+  margin-right: 10px;
+  content: '-';
+}
+.breadcrumbs__item:not(:last-child){
+  margin-right: 10px;
+}
+.breadcrumbs__link{
+  padding: 5px 0;
 }

@@ -3,6 +3,7 @@
     /* Цвета */
     --color-text-black: #000;
     --color-text-grey: #acacac;
+    --color-text-dark-grey: #888888;
     --color-text-dark-blue: #040F33;
     --color-text-gold: #9E915B;
     --color-text-white: #fff;
@@ -59,8 +60,10 @@
     --radius-max: 25px;
 
     --border-grey: 1px solid #C7C7C7;
+    --border-blue: 1px solid var(--color-bg-blue);
 
     --shadow-md: 0 8px 20px rgba(0,0,0,0.15);
+    --shadow-sm: 0 0 20px 0 rgba(46, 46, 46, 0.2);
     
     /* Шрифты */
     --font-family-cormorant-garamond: 'Cormorant Garamond', 'Times New Roman', 'Georgia', 'Times', serif;
@@ -194,6 +197,10 @@
 
   60%  { box-shadow: inset 0 0 20px rgba(255, 0, 64, 0.35); }
   100% { box-shadow: inset 0 0 0 rgba(255, 0, 64, 0); }
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 a{
