@@ -77,10 +77,12 @@
     --font-size-text-md: 1.25rem; /* 20px */
     --font-size-text-lg: 1.5rem; /* 24px */
 
-    --font-size-title-xs: 1rem; /* h4... - 16px */
-    --font-size-title-sm: 1.5rem; /* h3 - 24px */
-    --font-size-title-md: 2rem; /* h2 - 32px */
-    --font-size-title-lg: 2.5rem; /* h1 - 40px */
+    --font-size-title-min: 0.875rem; /* h5... - 14px */
+    --font-size-title-xs: 1rem; /* h5... - 16px */
+    --font-size-title-sm: 1.125rem; /* h4... - 18px */
+    --font-size-title-md: 1.5rem; /* h3 - 24px */
+    --font-size-title-lg: 2rem; /* h2 - 32px */
+    --font-size-title-max: 2.5rem; /* h1 - 40px */
 
     --font-size-btn: 1rem;
 }
@@ -226,13 +228,13 @@ h1, h2, h3, h4, h5, h6 {
 
 h1{
     font-family: var(--font-family-cormorant-garamond);
-    font-size: var(--font-size-title-lg);
+    font-size: var(--font-size-title-max);
     font-weight: 600;
 }
 
 h2, h3 {
     font-family: var(--font-family-montserrat);
-    font-size: var(--font-size-title-md);
+    font-size: var(--font-size-title-lg);
 }
 
 p{

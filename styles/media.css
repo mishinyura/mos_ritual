@@ -142,13 +142,13 @@
         max-width: var(--max-width-container-tablet);
     }
     .hero__title{
-        font-size: var(--font-size-title-md);
+        font-size: var(--font-size-title-lg);
     }
     .hero__description{
         font-size: var(--font-size-text-md);
     }
     .hero__advant{
-        font-size: var(--font-size-title-md);
+        font-size: var(--font-size-title-lg);
     }
     .hero__detail{
         font-size: var(--font-size-text-sm);
@@ -482,7 +482,7 @@
         margin-bottom: 20px;
     }
     .hero__title{
-        font-size: var(--font-size-title-sm);
+        font-size: var(--font-size-title-md);
     }
     .hero__description{
         font-size: var(--font-size-text-sm);
@@ -510,11 +510,11 @@
         padding: var(--padding-tb-container-mobile) var(--padding-lr-container-mobile);
     }
     .servicese__text{
-        font-size: var(--font-size-title-sm);
+        font-size: var(--font-size-title-md);
     }
     .services__title{
         margin-bottom: var(--margin-bottom-title-mobile);
-        font-size: var(--font-size-title-sm);
+        font-size: var(--font-size-title-md);
     }
     .services__description{
         margin-bottom: var(--margin-bottom-descr-mobile);
@@ -574,7 +574,7 @@
     }
     .answers__title{
         margin-bottom: var(--margin-bottom-title-mobile);
-        font-size: var(--font-size-title-sm);
+        font-size: var(--font-size-title-md);
     }
     .answers__question{
         font-size: var(--font-size-text-sm);
@@ -600,7 +600,7 @@
     }
     .products__title{
         margin-bottom: var(--margin-bottom-title-mobile);
-        font-size: var(--font-size-title-sm);
+        font-size: var(--font-size-title-md);
     }
 
 

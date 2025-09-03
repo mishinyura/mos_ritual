@@ -48,7 +48,7 @@ ______________*/
 }
 .hero__text{
   padding: 4em 0;
-  font-size: var(--font-size-title-lg);
+  font-size: var(--font-size-title-max);
 }
 .hero__title{
   margin-bottom: var(--margin-bottom-title-desktop);
@@ -83,7 +83,7 @@ ______________*/
   padding: 0.75em;
   border: 1px solid #ffffff49;
   box-sizing: border-box;
-  font-size: var(--font-size-title-lg);
+  font-size: var(--font-size-title-max);
   backdrop-filter: blur(20px);
   box-shadow: 0 0 1px 0 #00000049;
   
@@ -153,7 +153,7 @@ ______________*/
 .calling__title{
   margin-bottom: var(--margin-bottom-title-desktop);
   font-family: var(--font-family-montserrat);
-  /* font-size: var(--font-size-title-sm); */
+  /* font-size: var(--font-size-title-md); */
   font-weight: 600;
   color: var(--color-text-dark-blue);
 }
@@ -329,7 +329,7 @@ ______________*/
 }
 .servicese__text{
   margin-bottom: 30px;
-  font-size: var(--font-size-title-md);
+  font-size: var(--font-size-title-lg);
 }
 .services__title{
   margin-bottom: var(--margin-bottom-title-desktop);
@@ -400,7 +400,7 @@ ______________*/
   transition: color .2s;
 }
 .services__subtitle{
-  font-size: var(--font-size-title-sm);
+  font-size: var(--font-size-title-md);
   font-weight: 600;
 }
 .services__subdescr{
@@ -473,7 +473,7 @@ ______________*/
   flex: 1 1 auto;
   min-width: 0;
   /* flex-basis: 40%; */
-  font-size: var(--font-size-title-md);
+  font-size: var(--font-size-title-lg);
 }
 .reviews__title{
   margin-bottom: var(--margin-bottom-title-desktop)
@@ -559,7 +559,7 @@ ______________*/
 }
 .answers__title{
   margin-bottom: var(--margin-bottom-title-desktop);
-  font-size: var(--font-size-title-md);
+  font-size: var(--font-size-title-lg);
 }
 .answers__content{
   display: flex;
@@ -637,7 +637,7 @@ ______________*/
 .callback__title{
   margin-bottom: var(--margin-bottom-title-desktop);
   font-family: var(--font-family-montserrat);
-  /* font-size: var(--font-size-title-sm); */
+  /* font-size: var(--font-size-title-md); */
   font-weight: 600;
   color: var(--color-text-dark-blue);
 }
@@ -832,7 +832,7 @@ ______________*/
   position: relative;
   display: flex;
   padding: 1.5em;
-  font-size: var(--font-size-title-sm);
+  font-size: var(--font-size-title-md);
   background-color: var(--color-bg-white);
 }
 .tariffs__rate:not(:last-child){
@@ -860,7 +860,7 @@ ______________*/
 .tariffs__count{
   display: flex;
   align-items: center;
-  font-size: var(--font-size-title-md);
+  font-size: var(--font-size-title-lg);
   color: transparent;
   background: var(--liear-gradient-text-gold);
   background-clip: text;

@@ -250,6 +250,12 @@ class ProductDetailPage {
         });
 
         new Tabs('.tabs')
+
+        new Accordion({
+            name: '.conditions__accord',
+            btns: '.conditions__name',
+            collapse: false
+        })
     }
     
 }

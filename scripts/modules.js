@@ -75,10 +75,12 @@ class Tabs{
         for (let detail of this.details) {
             if (detail === detailActive) {
                 detail.classList.add('active')
+                detail.style.height = `${detail.scrollHeight}px`;
                 btn.target.classList.add('active')
                 this.activeBtn = btn.target
             } else {
                 detail.classList.remove('active')
+                detail.style.height = 0;
             }
         }
     }
@@ -162,6 +164,12 @@ class FormModal{
 }
 
 class Accordion{
+    /**
+     * 
+     * @param {String} name Селектор контейнера, в котором список элементов
+     * @param {String} btns Селектор кнопок, под которыми детальное описание
+     * @param {Boolean} collapse True - при открытии одного, открытый ранее соваричается
+     */
     constructor({name, btns, collapse}){
         this.accordion = document.querySelector(name)
         this.btns = this.accordion.querySelectorAll(btns)
@@ -178,18 +186,24 @@ class Accordion{
     open(btn){
         let detail = btn.nextElementSibling
         detail.classList.add('open')
+        detail.style.height = `${detail.scrollHeight + 25}px`
         btn.classList.add('open')
     }
 
     close(btn){
         btn.classList.remove('open')
-        btn.nextElementSibling.classList.remove('open')
+        let detail = btn.nextElementSibling
+        detail.classList.remove('open')
+        detail.style.height = 0;
     }
 
     closeAll() {
+        let detail;
         for (let btn of this.btns) {
             btn.classList.remove('open')
-            btn.nextElementSibling.classList.remove('open')
+            detail = btn.nextElementSibling
+            detail.classList.remove('open')
+            detail.style.height = 0;
         }
     }
 
